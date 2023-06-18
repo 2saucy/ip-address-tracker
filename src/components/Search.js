@@ -13,9 +13,9 @@ const Search = ({ setIpAddress }) => {
     }
 
     return(
-        <div>
-            <input type="text" value={searchQuery} onChange={handleChange} placeholder="Search for any IP Address or domain" />
-            <button onClick={handleClick} >Buscar</button>
+        <div className="search">
+            <input className="search__input" type="text" value={searchQuery} onChange={handleChange} placeholder="Search for any IP Address or domain" />
+            <a className="search__button" href="#" onClick={handleClick} ></a>
         </div>
     );
 }

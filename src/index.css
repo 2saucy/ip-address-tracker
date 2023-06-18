@@ -1,9 +1,106 @@
-body{
-    min-height: 100vw;
+:root{
+    --very-dark-gray: hsl(0, 0%, 17%);
+    --dark-gray: hsl(0, 0%, 59%);
 }
 
-.display{
+*{
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* App */
+
+.App{
     display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container{
+    background-image: url(./assets/pattern-bg-desktop.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 6rem;
+    
+}
+
+.container h1{
+    color: white;
+}
+
+.container span{
+    color: red;
+}
+
+/* Search */
+
+.search{
+    display: flex;
+    border-radius: 1rem;
+    min-width: 40%;
+    padding-bottom: 1rem;
+}
+
+.search__input{
+    font-size: 16px;
+    border: none;
+    border-radius: 1rem 0 0 1rem;
     padding: 1rem;
-    border: solid 1px black;
+    width: 95%;
+}
+
+.search__input:focus{
+    outline: none;
+}
+
+.search__button{
+    background-image: url(./assets/icon-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--very-dark-gray);
+    border-radius: 0 1rem 1rem 0;
+    padding: 1rem;
+    width: 5%;
+}
+
+/* Map */
+
+#map{
+    height: 100%;
+}
+
+/* Display */
+
+.display{
+    background-color: white;
+    display: flex;
+    gap: 3rem;
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    border-radius: 1rem;
+    white-space: nowrap;
+}
+
+.display__option{
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .7em;
+}
+
+.display__output{
+    color: var(--very-dark-gray);
+    font-weight: 700;
+    font-size: 1.2em;
 }

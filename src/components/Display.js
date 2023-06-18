@@ -8,24 +8,24 @@ const Display = ({ info }) => {
 
     return(
         <div className="display">
-            <div>
-                <p>Ip Address</p>
-                <p>{info.query}</p>
+            <div className="display__box">
+                <p className="display__option">Ip Address</p>
+                <p className="display__output">{info.query}</p>
             </div>
             <hr/>
-            <div>
-                <p>Location</p>
-                <p>{`${info.city}, ${info.country}`}</p>
+            <div className="display__box">
+                <p className="display__option">Location</p>
+                <p className="display__output">{`${info.city}, ${info.country}`}</p>
             </div>
             <hr/>
-            <div>
-                <p>Timezone</p>
-                <p>{info.timezone}</p>
+            <div className="display__box">
+                <p className="display__option">Timezone</p>
+                <p className="display__output">{info.timezone}</p>
             </div>
             <hr/>
-            <div>
-                <p>ISP</p>
-                <p>{info.isp}</p>
+            <div className="display__box">
+                <p className="display__option">ISP</p>
+                <p className="display__output">{info.isp}</p>
             </div>
         </div>
     );
