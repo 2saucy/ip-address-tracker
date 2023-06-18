@@ -29,7 +29,8 @@ h1{
     height: 100vh;
 }
 .container{
-    background-image: url(./assets/pattern-bg-desktop.png);
+    background-image: url(../assets/pattern-bg-mobile.png);
+    background-repeat: no-repeat;
     align-items: center;
     padding-bottom: 6rem;
     position: relative;
@@ -61,7 +62,7 @@ h1{
     outline: none;
 }
 .search__button{
-    background-image: url(./assets/icon-arrow.svg);
+    background-image: url(../assets/icon-arrow.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-color: var(--very-dark-gray);
@@ -87,6 +88,9 @@ h1{
     border-radius: 1rem;
     width: 80%;
 }
+.display hr{
+    display: none;
+}
 .display__box{
     padding: 1rem 2rem;
 }
@@ -104,6 +108,12 @@ h1{
 }
 
 /* Media Query */
+@media screen and (min-width: 376px) {
+    .container{
+        background-image: url(../assets/pattern-bg-desktop.png);
+    }
+}
+
 @media screen and (min-width: 846px) {
     .search{
         width: auto;
@@ -112,6 +122,11 @@ h1{
         flex-direction: row;
         align-items: center;
         top: 80%;
+    }
+    .display hr{
+        display: inline;
+        height: 3rem;
+        border: rgba(128, 128, 128, 0.24) solid .1em;
     }
     .display__box{
         width: 100%;
