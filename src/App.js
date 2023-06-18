@@ -34,8 +34,8 @@ function App() {
         <h1>IP Address Tracker</h1>
         <Search setIpAddress={setIpAddress}/>
         {error && <span>{error}</span>}
+        <Display info={info}/>
       </div>
-      <Display info={info}/>
       <Map coords={coords}/>
     </div>
   );
