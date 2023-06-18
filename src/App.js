@@ -14,13 +14,13 @@ function App() {
 
   const fetchIpApi = async () => {
     setError("")
-    const response = await fetch(`https://ip-api.com/json/${ipAddress}`);
+    const response = await fetch(`https://ipapi.co/${ipAddress}/json`);
     const data = await response.json();
-    if(data.status === "success"){
-      setInfo(data);
-      setCoords([data.lat, data.lon]);
+    if(data.error){
+      setError(data.reason);
     }else{
-      setError(data.message);
+      setInfo(data);
+      setCoords([data.latitude, data.longitude]);
     }
   }
 
